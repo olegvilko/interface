@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace @interface
 {
@@ -10,6 +6,22 @@ namespace @interface
     {
         static void Main(string[] args)
         {
+            Ship ship = new Ship();
+            Console.WriteLine(ship.Test("Oleg"));
+            Console.ReadKey();
         }
+    }
+
+    public class Ship : IShip
+    {
+        public string Test(string str)
+        {
+            return str;
+        }
+    }
+
+    public interface IShip
+    {
+        string Test(string str);
     }
 }
